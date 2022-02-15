@@ -9,7 +9,12 @@ import os
 import pathlib
 from argparse import ArgumentParser
 
+from pathlib import Path
 import pytorch_lightning as pl
+
+import sys
+sys.path.append(str(Path.cwd() / Path("../../")))
+
 from fastmri.data.mri_data import fetch_dir
 from fastmri.data.subsample import create_mask_for_mask_type
 from fastmri.data.transforms import UnetDataTransform
@@ -81,8 +86,8 @@ def build_args():
 
     # basic args
     path_config = pathlib.Path("../../fastmri_dirs.yaml")
-    num_gpus = 2
-    backend = "ddp"
+    num_gpus = 1
+    backend = "ddp_cpu"
     batch_size = 1 if backend == "ddp" else num_gpus
 
     # set defaults based on optional directory config

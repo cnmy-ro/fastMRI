@@ -1,12 +1,14 @@
-# fastMRI
+# Personal fork of the fastMRI code
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebookresearch/fastMRI/blob/master/LICENSE.md)
-[![Build and Test](https://github.com/facebookresearch/fastMRI/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/facebookresearch/fastMRI/actions/workflows/build-and-test.yml)
+Links to the original material:
+- [Website and Leaderboards](https://fastMRI.org) |
+- [Dataset](https://fastmri.med.nyu.edu/) |
+- [GitHub](https://github.com/facebookresearch/fastMRI) |
+- [Publications](#list-of-papers)
 
-[Website and Leaderboards](https://fastMRI.org) |
-[Dataset](https://fastmri.med.nyu.edu/) |
-[GitHub](https://github.com/facebookresearch/fastMRI) |
-[Publications](#list-of-papers)
+
+
+--
 
 Accelerating Magnetic Resonance Imaging (MRI) by acquiring fewer measurements
 has the potential to reduce medical costs, minimize stress to patients and make
@@ -48,32 +50,6 @@ that you can access via the `help` function in IPython. For example:
 from fastmri.data import SliceDataset
 
 help(SliceDataset)
-```
-
-## Dependencies and Installation
-
-**Note:** Contributions to the code are continuously tested via GitHub actions.
-If you encounter an issue, the best first thing to do is to try to match the
-test environments in `requirements.txt` and `dev-requirements.txt`.
-
-First install PyTorch according to the directions at the
-[PyTorch Website](https://pytorch.org/get-started/) for your operating system
-and CUDA setup. Then, run
-
-```bash
-pip install fastmri
-```
-
-`pip` will handle all package dependencies. After this you should be able to
-run most of the code in the repository.
-
-### Installing Directly from Source
-
-If you want to install directly from the GitHub source, clone the repository,
-navigate to the `fastmri` root directory and run
-
-```bash
-pip install -e .
 ```
 
 ## Package Structure & Usage
@@ -133,16 +109,6 @@ Please look at
 [this U-Net demo script](https://github.com/facebookresearch/fastMRI/tree/master/fastmri_examples/unet/train_unet_demo.py) for an
 example of how to train a model using the PyTorch Lightning framework.
 
-## Submitting to the Leaderboard
-
-Run your model on the provided test data and create a zip file containing your
-predictions. `fastmri` has a `save_reconstructions` function that saves the
-data in the correct format.
-
-Upload the zip file to any publicly accessible cloud storage (e.g. Amazon S3,
-Dropbox etc). Submit a link to the zip file on the
-[challenge website](https://fastmri.org/submit). You will need to create an
-account before submitting.
 
 ## License
 
