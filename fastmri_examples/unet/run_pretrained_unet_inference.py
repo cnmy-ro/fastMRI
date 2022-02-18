@@ -10,6 +10,9 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
+import sys
+sys.path.append(str(Path.cwd() / Path("../../")))
+
 import fastmri
 import fastmri.data.transforms as T
 import numpy as np

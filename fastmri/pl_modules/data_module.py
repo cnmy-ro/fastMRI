@@ -89,7 +89,7 @@ class FastMriDataModule(pl.LightningDataModule):
         volume_sample_rate: Optional[float] = None,
         use_dataset_cache_file: bool = True,
         batch_size: int = 1,
-        num_workers: int = 4,
+        num_workers: int = 0,
         distributed_sampler: bool = False,
     ):
         """
@@ -221,7 +221,7 @@ class FastMriDataModule(pl.LightningDataModule):
             if self.test_path is not None:
                 test_path = self.test_path
             else:
-                test_path = self.data_path / f"{self.challenge}_test"
+                test_path = self.data_path / f"{self.challenge}_test_v2"
             data_paths = [
                 self.data_path / f"{self.challenge}_train",
                 self.data_path / f"{self.challenge}_val",
@@ -326,7 +326,7 @@ class FastMriDataModule(pl.LightningDataModule):
         )
         parser.add_argument(
             "--num_workers",
-            default=4,
+            default=0,
             type=int,
             help="Number of workers to use in data loader",
         )

@@ -1,0 +1,4 @@
+# brain_path: /path/to/brain
+# knee_path: D:\Datasets\fastMRI_minimal\knee
+knee_path: /exports/lkeb-hpc/lrbeljaards/fastMriData/knee
+log_path: /exports/lkeb-hpc/csrao/results/fastmri_mc_unet_trial
